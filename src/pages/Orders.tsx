@@ -28,7 +28,7 @@ interface UserProfile {
 
 const Orders = () => {
   const { user: authContextUser } = useAuth();
-  const apiBaseUrl = "http://localhost:3000/api";
+  const apiBaseUrl = "https://nexcrm-service.onrender.com/api";
   const [userRole, setUserRole] = useState<string | null>(null);
   const [isLoadingRole, setIsLoadingRole] = useState(true);
   const [isExportingOrders, setIsExportingOrders] = useState(false);
@@ -84,7 +84,7 @@ const Orders = () => {
   const fetchOrders = async () => {
     setIsLoading(true);
     try {
-      const response = await fetch("http://localhost:3000/api/data/orders", {
+      const response = await fetch("https://nexcrm-service.onrender.com/api/data/orders", {
         method: "GET",
         credentials: "include",
       });
@@ -125,7 +125,7 @@ const Orders = () => {
         
         const ordersData = JSON.parse(content);
         
-        const response = await fetch("http://localhost:3000/api/data/orders", {
+        const response = await fetch("https://nexcrm-service.onrender.com/api/data/orders", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

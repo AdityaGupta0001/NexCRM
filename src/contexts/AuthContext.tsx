@@ -38,7 +38,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const checkAuth = async (): Promise<boolean> => {
     try {
       setLoading(true);
-      const response = await fetch("http://localhost:3000/api/auth/me", {
+      const response = await fetch("https://nexcrm-service.onrender.com/api/auth/me", {
         method: "GET",
         credentials: "include",
       });
@@ -62,7 +62,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   const logout = async () => {
     try {
-      const response = await fetch("http://localhost:3000/api/auth/logout", {
+      const response = await fetch("https://nexcrm-service.onrender.com/api/auth/logout", {
         method: "POST", // POST method for logout
         credentials: "include",
       });

@@ -17,7 +17,7 @@ const Login = () => {
       });
       
       // Initiate the OAuth flow by redirecting to the backend's Google auth route
-      window.location.href = "http://localhost:3000/api/auth/google";
+      window.location.href = "https://nexcrm-service.onrender.com/api/auth/google";
     } catch (error) {
       console.error("Login error:", error);
       toast({

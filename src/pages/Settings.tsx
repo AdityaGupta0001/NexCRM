@@ -77,7 +77,7 @@ interface UserProfile { // For the /api/auth/me response
 const Settings = () => {
   const { user } = useAuth();
   const { user: authContextUser } = useAuth();
-  const apiBaseUrl = "http://localhost:3000/api";
+  const apiBaseUrl = "https://nexcrm-service.onrender.com/api";
 
   const [userRole, setUserRole] = useState<string | null>(null);
   const [isLoadingRole, setIsLoadingRole] = useState(true);

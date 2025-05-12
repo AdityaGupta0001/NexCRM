@@ -45,7 +45,7 @@ const Segments = () => {
     setIsLoading(true);
     try {
       // In a real implementation, you would fetch from your API
-      const response = await fetch("http://localhost:3000/api/segments", {
+      const response = await fetch("https://nexcrm-service.onrender.com/api/segments", {
         credentials: "include",
       });
 
@@ -74,7 +74,7 @@ const Segments = () => {
 
   const handleCreateSegmentWithAI = async () => {
     try {
-      const response = await fetch("http://localhost:3000/api/ai/parse-segment", {
+      const response = await fetch("https://nexcrm-service.onrender.com/api/ai/parse-segment", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -90,7 +90,7 @@ const Segments = () => {
       const rules = await response.json();
       
       // Now create the segment with the AI-generated rules
-      const createResponse = await fetch("http://localhost:3000/api/segments/create", {
+      const createResponse = await fetch("https://nexcrm-service.onrender.com/api/segments/create", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

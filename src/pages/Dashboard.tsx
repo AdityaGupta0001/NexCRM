@@ -91,7 +91,7 @@ const Dashboard = () => {
 
       try {
         // Fetch customers
-        const customersResponse = await fetch("http://localhost:3000/api/data/customers", {
+        const customersResponse = await fetch("https://nexcrm-service.onrender.com/api/data/customers", {
           method: "GET",
           credentials: "include",
         });
@@ -108,7 +108,7 @@ const Dashboard = () => {
         setTotalVisits(calculatedTotalVisits);
 
         // Fetch orders
-        const ordersResponse = await fetch("http://localhost:3000/api/data/orders", {
+        const ordersResponse = await fetch("https://nexcrm-service.onrender.com/api/data/orders", {
           method: "GET",
           credentials: "include",
         });

@@ -51,7 +51,7 @@ const Campaigns = () => {
     setIsLoading(true);
     try {
       // In a real implementation, you would fetch from your API
-      const response = await fetch("http://localhost:3000/api/campaigns", {
+      const response = await fetch("https://nexcrm-service.onrender.com/api/campaigns", {
         credentials: "include",
       });
 
@@ -75,7 +75,7 @@ const Campaigns = () => {
 
   const fetchSegments = async () => {
     try {
-      const response = await fetch("http://localhost:3000/api/segments", {
+      const response = await fetch("https://nexcrm-service.onrender.com/api/segments", {
         credentials: "include",
       });
 
@@ -92,7 +92,7 @@ const Campaigns = () => {
 
   const handleCreateCampaign = async () => {
     try {
-      const response = await fetch("http://localhost:3000/api/campaigns/send", {
+      const response = await fetch("https://nexcrm-service.onrender.com/api/campaigns/send", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -136,7 +136,7 @@ const Campaigns = () => {
     
     try {
       // First, get the segment details to use for suggestions
-      const segmentResponse = await fetch(`http://localhost:3000/api/segments/${selectedSegmentId}`, {
+      const segmentResponse = await fetch(`https://nexcrm-service.onrender.com/api/segments/${selectedSegmentId}`, {
         credentials: "include",
       });
 
@@ -148,7 +148,7 @@ const Campaigns = () => {
       const segment = segments.find(s => s._id === selectedSegmentId);
       
       // Now get message suggestions
-      const response = await fetch("http://localhost:3000/api/ai/message-suggestions", {
+      const response = await fetch("https://nexcrm-service.onrender.com/api/ai/message-suggestions", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
